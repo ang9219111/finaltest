@@ -190,17 +190,16 @@
             document.getElementById("t6").setAttribute("src", "snoopy.jpg");
 
         }
-        function background(){
-            count=count+1;
-            
-            music=document.getElementById("music");
-            if(count%2!=0)
-            {
-                document.getElementById("cd").setAttribute("src","cd.gif");
-                music.play();                
+        function background() {
+            count = count + 1;
+
+            music = document.getElementById("music");
+            if (count % 2 == 0) {
+                document.getElementById("cd").setAttribute("src", "cd.gif");
+                music.play();
             }
-            else{
-                document.getElementById("cd").setAttribute("src","cd.jpg");
+            else {
+                document.getElementById("cd").setAttribute("src", "cd.jpg");
                 music.pause();
             }
 
@@ -228,7 +227,7 @@
     <audio id="music" preload="auto">
         <source src="music.mp3" type="audio/mpeg">
     </audio>
-    <audio id="piano1" preload="auto">
+    <audio id="piano1" preload="auto" autoplay>
         <source src="piano1.mp3" type="audio/mpeg">
     </audio>
     <audio id="piano2" preload="auto">
