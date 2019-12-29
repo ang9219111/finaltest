@@ -194,11 +194,11 @@
 
             music = document.getElementById("music");
             if (count % 2 == 0) {
-                document.getElementById("cd").setAttribute("src", "cd.gif");
+                document.getElementById("cd").setAttribute("src", "cd.jpg");
                 music.play();
             }
             else {
-                document.getElementById("cd").setAttribute("src", "cd.jpg");
+                document.getElementById("cd").setAttribute("src", "cd.gif");
                 music.pause();
             }
 
@@ -222,7 +222,7 @@
         <div id="f" class="section"><a href="合唱技巧.html"><img id="t6" class="img1" src="snoopy.jpg"
                     onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">合唱技巧</span></a></div>
     </div>
-    <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.jpg " onclick="background()"></div>
+    <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.gif " onclick="background()"></div>
     <audio id="music" preload="auto" autoplay>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
