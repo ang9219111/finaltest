@@ -196,17 +196,16 @@
             document.getElementById("t6").setAttribute("src", "snoopy.jpg");
 
         }
-        function background(){
-            count=count+1;
-            
-            music=document.getElementById("music");
-            if(count%2!=0)
-            {
-                document.getElementById("cd").setAttribute("src","cd.gif");
-                music.play();                
+        function background() {
+            count = count + 1;
+
+            music = document.getElementById("music");
+            if (count % 2 == 0) {
+                document.getElementById("cd").setAttribute("src", "cd.gif");
+                music.play();
             }
-            else{
-                document.getElementById("cd").setAttribute("src","cd.jpg");
+            else {
+                document.getElementById("cd").setAttribute("src", "cd.jpg");
                 music.pause();
             }
 
@@ -231,7 +230,7 @@
                     onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">合唱技巧</span></a></div>
     </div>
     <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.jpg " onclick="background()"></div>
-    <audio id="music" preload="auto">
+    <audio id="music" preload="auto" autoplay>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
     <audio id="piano1" preload="auto">
