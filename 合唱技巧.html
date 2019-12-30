@@ -1,155 +1,230 @@
+
 <html>
 
-<head>
-    <title>合唱技巧</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-    <link rel="stylesheet" type="text/css" href="home.css">
-    <style>
-        @font-face {
-            font-family: "str1";
-            src: url("WCL-07.ttf");
-        }
-
-        #main {
-            position: absolute;
-            left: 16%;
-            width: 68%;
-            height: 2000px;
-            overflow: hidden;
-            background: rgba(0, 0, 0, .5);
-        }
-
-        body {
-            width: 100%;
-            height: 2000px;
-            background-image: url('sky.jpg');
-        }
-    </style>
-    <script>
-        var count = 0;
-        function mouseover1() {
-
-            document.getElementById("t1").setAttribute("src", "snoopy.gif")
-            piano1 = document.getElementById("piano1");
-            piano1.currentTime = 0;
-            piano1.play();
-
-        }
-        function mouseover2() {
-
-            document.getElementById("t2").setAttribute("src", "snoopy.gif")
-            piano2 = document.getElementById("piano2");
-            piano2.currentTime = 0;
-            piano2.play();
-        }
-        function mouseover3() {
-
-            document.getElementById("t3").setAttribute("src", "snoopy.gif")
-            piano3 = document.getElementById("piano3");
-            piano3.currentTime = 0;
-            piano3.play();
-        }
-        function mouseover4() {
-
-            document.getElementById("t4").setAttribute("src", "snoopy.gif")
-            piano4 = document.getElementById("piano4");
-            piano4.currentTime = 0;
-            piano4.play();
-        }
-        function mouseover5() {
-
-            document.getElementById("t5").setAttribute("src", "snoopy.gif")
-            piano5 = document.getElementById("piano5");
-            piano5.currentTime = 0;
-            piano5.play();
-        }
-        function mouseover6() {
-
-            document.getElementById("t6").setAttribute("src", "snoopy.gif")
-            piano6 = document.getElementById("piano6");
-            piano6.currentTime = 0;
-            piano6.play();
-        }
-        function mouseout1() {
-            document.getElementById("t1").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout2() {
-            document.getElementById("t2").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout3() {
-            document.getElementById("t3").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout4() {
-            document.getElementById("t4").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout5() {
-            document.getElementById("t5").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout6() {
-            document.getElementById("t6").setAttribute("src", "snoopy.jpg");
-
-        }
-        function background() {
-            count = count + 1;
-
-            music = document.getElementById("music");
-            if (count % 2 == 0) {
-                document.getElementById("cd").setAttribute("src", "cd.gif");
-                music.play();
+    <head>
+        <title>合唱技巧</title>
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <style>
+            @font-face {
+                font-family: "str1";
+                src: url("WCL-07.ttf");
             }
-            else {
-                document.getElementById("cd").setAttribute("src", "cd.jpg");
-                music.pause();
+    
+            #main {
+                position: absolute;
+                left: 16%;
+                width: 68%;
+                height: 2200px;
+                overflow: hidden;
+                background: rgba(0, 0, 0, .5);
             }
-
-        }
-    </script>
-</head>
-
-<body>
-    <div id="main">
-        <div id="head" align="center" class="animated infinite bounce" style="animation-duration: 2s">合唱技巧</div>
-        <div id="a" class="section"><a href="index.html"><img id="t1" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover1()" onmouseout="mouseout1()"><span class="word1">主頁</span></a></div>
-        <div id="b" class="section"><a href="簡介.html"><img id="t2" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover2()" onmouseout="mouseout2()"><span class="word1">簡介</span></a></div>
-        <div id="c" class="section"><a href="音域.html"><img id="t3" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover3()" onmouseout="mouseout3()"><span class="word1">音域</span></a></div>
-        <div id="d" class="section"><a href="推薦欣賞.html"><img id="t4" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover4()" onmouseout="mouseout4()"><span class="word">推薦欣賞</span></a></div>
-        <div id="e" class="section"><a href="近期活動.html"><img id="t5" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover5()" onmouseout="mouseout5()"><span class="word">近期活動</span></a></div>
-        <div id="f" class="section"><a href="歷史介紹.html"><img id="t6" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">歷史介紹</span></a></div>
-    </div>
-    <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.gif " onclick="background()"></div>
-    <audio id="music" preload="auto" autoplay>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano1" preload="auto">
-        <source src="piano1.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano2" preload="auto">
-        <source src="piano2.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano3" preload="auto">
-        <source src="piano3.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano4" preload="auto">
-        <source src="piano4.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano5" preload="auto">
-        <source src="piano5.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano6" preload="auto">
-        <source src="piano6.mp3" type="audio/mpeg">
-    </audio>
-</body>
-
-</html>
+    
+            body {
+                width: 100%;
+                height: 2200px;
+                background-image: url('sky.jpg');
+            }
+            #b1 {
+                position: absolute;
+                top: 700px;
+                left: 10%;
+                width: 80%;
+                height: 9.1%;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.466);
+                border-radius: 40px;
+            }
+            #b2 {
+                position: absolute;
+                top: 950px;
+                left: 10%;
+                width: 80%;
+                height: 9.1%;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.466);
+                border-radius: 40px;
+            }
+            #b3 {
+                position: absolute;
+                top: 1200px;
+                left: 10%;
+                width: 80%;
+                height: 9.1%;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.466);
+                border-radius: 40px;
+            }
+            #b4 {
+                position: absolute;
+                top: 1450px;
+                left: 10%;
+                width: 80%;
+                height: 9.1%;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.466);
+                border-radius: 40px;
+            }
+            #b5 {
+                position: absolute;
+                top: 1750px;
+                left: 10%;
+                width: 80%;
+                height: 9.1%;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.466);
+                border-radius: 40px;
+            }
+        </style>
+        <script>
+            var count = 0;
+            function mouseover1() {
+    
+                document.getElementById("t1").setAttribute("src", "snoopy.gif")
+                piano1 = document.getElementById("piano1");
+                piano1.currentTime = 0;
+                piano1.play();
+    
+            }
+            function mouseover2() {
+    
+                document.getElementById("t2").setAttribute("src", "snoopy.gif")
+                piano2 = document.getElementById("piano2");
+                piano2.currentTime = 0;
+                piano2.play();
+            }
+            function mouseover3() {
+    
+                document.getElementById("t3").setAttribute("src", "snoopy.gif")
+                piano3 = document.getElementById("piano3");
+                piano3.currentTime = 0;
+                piano3.play();
+            }
+            function mouseover4() {
+    
+                document.getElementById("t4").setAttribute("src", "snoopy.gif")
+                piano4 = document.getElementById("piano4");
+                piano4.currentTime = 0;
+                piano4.play();
+            }
+            function mouseover5() {
+    
+                document.getElementById("t5").setAttribute("src", "snoopy.gif")
+                piano5 = document.getElementById("piano5");
+                piano5.currentTime = 0;
+                piano5.play();
+            }
+            function mouseover6() {
+    
+                document.getElementById("t6").setAttribute("src", "snoopy.gif")
+                piano6 = document.getElementById("piano6");
+                piano6.currentTime = 0;
+                piano6.play();
+            }
+            function mouseout1() {
+                document.getElementById("t1").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout2() {
+                document.getElementById("t2").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout3() {
+                document.getElementById("t3").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout4() {
+                document.getElementById("t4").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout5() {
+                document.getElementById("t5").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout6() {
+                document.getElementById("t6").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function background() {
+                count = count + 1;
+    
+                music = document.getElementById("music");
+                if (count % 2 == 0) {
+                    document.getElementById("cd").setAttribute("src", "cd.gif");
+                    music.play();
+                }
+                else {
+                    document.getElementById("cd").setAttribute("src", "cd.jpg");
+                    music.pause();
+                }
+    
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="main">
+            <div id="head" align="center" class="animated infinite bounce" style="animation-duration: 2s">合唱技巧</div>
+            <div id="a" class="section"><a href="index.html"><img id="t1" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover1()" onmouseout="mouseout1()"><span class="word1">主頁</span></a></div>
+            <div id="b" class="section"><a href="簡介.html"><img id="t2" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover2()" onmouseout="mouseout2()"><span class="word1">簡介</span></a></div>
+            <div id="c" class="section"><a href="音域.html"><img id="t3" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover3()" onmouseout="mouseout3()"><span class="word1">音域</span></a></div>
+            <div id="d" class="section"><a href="推薦欣賞.html"><img id="t4" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover4()" onmouseout="mouseout4()"><span class="word">推薦欣賞</span></a></div>
+            <div id="e" class="section"><a href="近期活動.html"><img id="t5" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover5()" onmouseout="mouseout5()"><span class="word">近期活動</span></a></div>
+            <div id="f" class="section"><a href="歷史介紹.html"><img id="t6" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">歷史介紹</span></a></div>
+            <div id="b1">
+                <p>第一點:很重要的就是發聲，這對很多人來說聽起來很簡單，然而還是需要一定的練習才能直接到位，因為這不只是用練習還有思考過後的發生一氣呵成的呈現。特別是要和別人對上，尤其是對一首曲子來說第一個字一起同時發生還是一種默契，多看指揮多抓到發音的技巧。
+                </p>
+            </div>
+            <div id="b2">
+                <p>
+                    第二點:呼吸和肚子的技巧，是唱任何聲月的基礎，卻同時也要費不少功夫，最基本的是要讓肚子配合唱歌適度的用力保存吸到的氣，外加平時也要多練習肺活量，以唱一些要一口氣唱完很長的片段。還有預留空間，如同音箱一般的原理，軟的東西比較吸音而出力的杜子可以更好的發出共鳴，而共鳴也是需要空間來進行
+                </p>
+            </div>
+            <div id="b3">
+                <p>
+                    第三點:視唱練耳是解決識譜、音準、節拍、節拍感的一種練習。它要求由易到難，循序漸進。先從簡單的音階練習到各種節拍的練習曲，包括音程和聲的練習，還可選擇一些聲部合唱練習，根據合唱隊的水平自選自編，長期系統地練習。
+                </p>
+            </div>
+            <div id="b4">
+                <p>
+                    第四點:正確的姿勢可以使歌唱達到事半功倍的效果，在合唱時相當強調身體的直立，因為人身體豎直時，聲帶在中間整個身體都是氣柱，發出的聲音會較好。所以，在合唱訓練時一定要要求團員不可彎腰駝背，要養成良好的姿勢。
+                </p>
+            </div>
+            <div id="b5">
+                <p>
+                    第五點:發聲練習，許多發生可以引導自己找到最適合唱歌發聲的位置，在許多比較困難的歌曲中還有莫大的幫助在轉音的部分始知更順暢。
+                </p>
+            </div>
+        </div>
+        <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.gif " onclick="background()"></div>
+        <audio id="music" preload="auto" autoplay>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano1" preload="auto">
+            <source src="piano1.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano2" preload="auto">
+            <source src="piano2.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano3" preload="auto">
+            <source src="piano3.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano4" preload="auto">
+            <source src="piano4.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano5" preload="auto">
+            <source src="piano5.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano6" preload="auto">
+            <source src="piano6.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+    
+    </html>
