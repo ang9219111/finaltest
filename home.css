@@ -11,6 +11,13 @@
     height: 100px;
     left: 85%;
 }
+p {
+    font-family: str1;
+    position: absolute;
+    font-size: 25px;
+    color: seashell;
+    left: 10px;
+}
 .overdiv{
     overflow: hidden;
 }
