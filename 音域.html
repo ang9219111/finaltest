@@ -10,6 +10,117 @@
             font-family: "str1";
             src: url("WCL-07.ttf");
         }
+
+        #main {
+            position: absolute;
+            left: 16%;
+            width: 68%;
+            height: 3000px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, .5);
+        }
+
+        body {
+            width: 100%;
+            height: 3000px;
+            background-image: url('sky.jpg');
+        }
+
+        p {
+            font-family: str1;
+            position: absolute;
+            font-size: 25px;
+            color: seashell;
+            left: 10px;
+        }
+
+        #b1 {
+            position: absolute;
+            top: 700px;
+            left: 10%;
+            width: 80%;
+            height: 170px;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.466);
+            border-radius: 40px;
+        }
+
+        #b2 {
+            position: absolute;
+            top: 920px;
+            left: 29%;
+            width: 40%;
+            height: 250px;
+            z-index: 2;
+            background: rgba(255, 192, 203, 0.699);
+            border-radius: 40px;
+        }
+
+        #b3 {
+            position: absolute;
+            top: 1250px;
+            left: 10%;
+            width: 80%;
+            height: 120px;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.466);
+            border-radius: 40px;
+        }
+
+        #b4 {
+            position: absolute;
+            top: 1420px;
+            left: 29%;
+            width: 40%;
+            height: 350px;
+            z-index: 2;
+            background: rgba(0, 225, 255, 0.541);
+            border-radius: 40px;
+        }
+
+        #b5 {
+            position: absolute;
+            top: 1830px;
+            left: 10%;
+            width: 80%;
+            height: 210px;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.466);
+            border-radius: 40px;
+        }
+
+        #b6 {
+            position: absolute;
+            top: 2100px;
+            left: 25%;
+            width: 50%;
+            height: 258px;
+            z-index: 2;
+            background: rgba(0, 225, 255, 0.541);
+            border-radius: 40px;
+        }
+
+        #b7 {
+            position: absolute;
+            top: 2420px;
+            left: 10%;
+            width: 80%;
+            height: 170px;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.466);
+            border-radius: 40px;
+        }
+
+        #b8 {
+            position: absolute;
+            top: 2650px;
+            left: 32%;
+            width: 37%;
+            height: 220px;
+            z-index: 2;
+            background: wheat;
+            border-radius: 40px;
+        }
     </style>
     <script>
         var count = 0;
@@ -82,7 +193,7 @@
         function background() {
             count = count + 1;
 
-            music = document.getElementById("music");
+            music = document.getElementById("musi");
             if (count % 2 == 0) {
                 document.getElementById("cd").setAttribute("src", "cd.gif");
                 music.play();
@@ -91,7 +202,55 @@
                 document.getElementById("cd").setAttribute("src", "cd.jpg");
                 music.pause();
             }
+        }
+        var b2 = 0;
+        function bu2() {
+            b2 = b2 + 1;
+            music = document.getElementById("music");
+            if (b2 % 2 != 0) {
+                music.currentTime = 12;
+                music.play();
+            }
+            else {
+                music.pause();
+            }
 
+        }
+        var b4 = 0;
+        function bu4() {
+            b4 = b4 + 1;
+            music1 = document.getElementById("music1");
+            if (b4 % 2 != 0) {
+                music1.currentTime = 12;
+                music1.play();
+            }
+            else {
+                music1.pause();
+            }
+        }
+        var b6 = 0;
+        function bu6() {
+            b6 = b6 + 1;
+            music2 = document.getElementById("music2");
+            if (b6 % 2 != 0) {
+                music2.currentTime = 0;
+                music2.play();
+            }
+            else {
+                music2.pause();
+            }
+        }
+        var b8 = 0;
+        function bu8() {
+            b8 = b8 + 1;
+            music3 = document.getElementById("music3");
+            if (b8 % 2 != 0) {
+                music3.currentTime = 52;
+                music3.play();
+            }
+            else {
+                music3.pause();
+            }
         }
     </script>
 </head>
@@ -111,10 +270,52 @@
                     onmouseover="mouseover5()" onmouseout="mouseout5()"><span class="word">歷史介紹</span></a></div>
         <div id="f" class="section"><a href="合唱技巧.html"><img id="t6" class="img1" src="snoopy.jpg"
                     onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">合唱技巧</span></a></div>
+        <div id="b1">
+            <p>Tenor(男高音):音域佔c－c2共15度的歌唱家。他們按音質、音色、音區等不同特點分為：抒情花腔男高音（lirico-Leggero tenor）、抒情男高音（lyric
+                tenor）、英雄男高音（heldentenor）和戲劇男高音（dramatic tenor）。</p>
+        </div>
+        <div id="b2" class="overdiv">
+            <img src="vitas.jfif" onclick="bu2()" class="imgformusic"
+                style="position: absolute; left:13%; top: 14%;cursor: pointer; ">
+            <audio id="music" preload="auto">
+                <source src="vitas.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div id="b3">
+            <p>Bass(男低音):音域F－f1共15度（按譜所示低8度）的歌唱家，音色低沉、渾厚、老成、持重。</p>
+        </div>
+        <div id="b4" class="overdiv">
+            <img src="bass_avi_kaplan.webp" onclick="bu4()" class="imgformusic"
+                style="position: absolute; left: 9%;top:7% ;cursor: pointer; ">
+            <audio id="music1" preload="auto">
+                <source src="bass_avi_kaplan.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div id="b5">
+            <p>(女高音):音域指成年女歌手能達到的聲音頻率（而非響度）最高的（通常是C4-C6）範圍。按音色、音區等不同特點分為：花腔女高音（Coloratura
+                soprano）（聲音最高，能唱出相當高的顫音）、抒情女高音（lyric soprano）（聲音較高，連貫流暢）和戲劇女高音（dramatic soprano）（聲音較低但有力度）</p>
+        </div>
+        <div id="b6" class="overdiv">
+            <img src="fiva_dance.jpg" onclick="bu6()" class="imgformusic" style="cursor: pointer">
+            <audio id="music2" preload="auto">
+                <source src="fiva_dance.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div id="b7">
+            <p>Alto(女低音):女聲中最低的聲部，音域通常是從中央Ç下的˚F音往上爬升二個八度（F3〜F5）音色相比女高音較寬厚深沉，有時候一些音色比較磁性暗啞，而聲音又渾厚的女中音，也會被歸類爲女低音。</p>
+        </div>
+        <div id="b8" class="overdiv">
+            <img src="alto.jfif" onclick="bu8()" class="imgformusic"
+                style="position: absolute; left:9% ;top:8% ;cursor: pointer; ">
+            <audio id="music3" preload="auto">
+                <source src="alto.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
     </div>
     <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.gif " onclick="background()"></div>
-    <audio id="music" preload="auto" autoplay>
-        <source src="music.mp3" type="audio/mpeg">
+    <audio id="musi" preload="auto" autoplay>
+        <source src="vitas.mp3" type="audio/mpeg">
     </audio>
     <audio id="piano1" preload="auto">
         <source src="piano1.mp3" type="audio/mpeg">
