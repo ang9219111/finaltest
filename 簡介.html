@@ -10,6 +10,73 @@
             font-family: "str1";
             src: url("WCL-07.ttf");
         }
+
+        #main {
+            position: absolute;
+            left: 16%;
+            width: 68%;
+            height: 2000px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, .5);
+        }
+
+        body {
+            width: 100%;
+            height: 2000px;
+            background-image: url('sky.jpg');
+        }
+
+        #b1 {
+            position: absolute;
+            top: 700px;
+            left: 10%;
+            width: 80%;
+            height: 80px;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.466);
+            border-radius: 40px;
+        }
+
+        #b2 {
+            top: 850px;
+            height: 170px;
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.466);
+            border-radius: 40px;
+        }
+
+        #b3 {
+            top: 1100px;
+            height: 150px;
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.466);
+            border-radius: 40px;
+        }
+
+        #b4 {
+            top: 1300px;
+            height: 350px;
+            position: absolute;
+            width: 63%;
+            left: 18%;
+            z-index: 2;
+            background: rgb(255, 255, 255);
+            border-radius: 40px;
+        }
+
+        p {
+            font-family: str1;
+            position: absolute;
+            font-size: 25px;
+            color: seashell;
+            left: 10px;
+        }
     </style>
     <script>
         var count = 0;
@@ -111,10 +178,23 @@
                     onmouseover="mouseover5()" onmouseout="mouseout5()"><span class="word">歷史介紹</span></a></div>
         <div id="f" class="section"><a href="合唱技巧.html"><img id="t6" class="img1" src="snoopy.jpg"
                     onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">合唱技巧</span></a></div>
+        <div id="b1">
+            <p>此網頁主要用於介紹淺顯易懂的合唱，使大家能開心地認識它。</p>
+        </div>
+        <div id="b2">
+            <p>除了原本大家最傳統認為的合唱外，還會加入一些不同一些現在也常出現的合唱模式。其中像是阿卡貝拉的混聲，其實現在音樂混合越來越多的素材，所以有時候在演藝一首歌的時候，現在也常會有人混入一些beatbox的技巧使整個樂曲更富變化和聆聽性。
+            </p>
+        </div>
+        <div id="b3">
+            <p>其中還會介紹一些活動和經典的樂曲表演使大家，能更開心地融入，畢竟音樂是一個需要帶進生活的調味料，多一種認識也是多一分的趣味，衝分享受藝文的滋味。</p>
+        </div>
+        <div id="b4">
+            <img src="DoReMi.jpg" style="position: absolute; left:8% ; top: 13%;">
+        </div>
     </div>
     <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.gif " onclick="background()"></div>
     <audio id="music" preload="auto" autoplay>
-        <source src="music.mp3" type="audio/mpeg">
+        <source src="DoReMi.mp3" type="audio/mpeg">
     </audio>
     <audio id="piano1" preload="auto">
         <source src="piano1.mp3" type="audio/mpeg">
