@@ -16,19 +16,20 @@
             position: absolute;
             left: 16%;
             width: 68%;
-            height: 2300px;
+            height: 2500px;
             overflow: hidden;
             background: rgba(0, 0, 0, .5);
         }
 
         body {
             width: 100%;
-            height: 2300px;
+            height: 2500px;
             background-image: url('sky.jpg');
         }
+
         #b1 {
             position: absolute;
-            top: 700px;
+            top: 1050px;
             left: 10%;
             width: 80%;
             height: 200px;
@@ -36,9 +37,10 @@
             background: rgba(0, 0, 0, 0.466);
             border-radius: 40px;
         }
+
         #b2 {
             position: absolute;
-            top: 1000px;
+            top: 1350px;
             left: 10%;
             width: 80%;
             height: 200px;
@@ -46,9 +48,10 @@
             background: rgba(0, 0, 0, 0.466);
             border-radius: 40px;
         }
-        #b3{
+
+        #b3 {
             position: absolute;
-            top: 1350px;
+            top: 1700px;
             left: 13%;
             width: 73%;
             height: 650px;
@@ -56,6 +59,34 @@
             background: rgba(255, 192, 203, 0.699);
             border-radius: 40px;
         }
+
+        #bhead {
+            position: relative;
+            font-size: 300%;
+            font-weight: bold;
+            top: 675px;
+            z-index: 2;
+            font-family: str1;
+            color: wheat;
+        }
+        #bcontent{
+            position: relative;
+            font-family: str1;
+            font-size: 200%;
+            left:15% ;
+            top: 705px;
+            z-index: 2;
+            color: whitesmoke;
+        }
+        #bcontent1{
+            position: relative;
+            font-family: str1;
+            font-size: 300%;
+            top: 735px;
+            z-index: 2;
+            color: rgb(94, 255, 0);
+        }
+
     </style>
     <script>
         var count = 0;
@@ -162,6 +193,11 @@
                     onmouseover="mouseover5()" onmouseout="mouseout5()"><span class="word">歷史介紹</span></a></div>
         <div id="f" class="section"><a href="合唱技巧.html"><img id="t6" class="img1" src="snoopy.jpg"
                     onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">合唱技巧</span></a></div>
+        <center><span id="bhead">2020台中市傳統藝術節-尋人啟事The Wanted-人聲樂團</span>
+        </center>
+        <span id="bcontent">活動地點: 葫蘆墩文化中心 戶外廣場<br>活動日期: 2020-01-28<br>活動時間: 15:40</span>
+        <center><span id="bcontent1">介紹</span></center>
+
         <div id="b1">
             <p>尋人啟事The
                 Wanted成立於2014年6月，短短兩年內便獲得多項國際阿卡貝拉大賽冠軍肯定，被媒體譽為「台版歌喉讚」。豐富多變的音樂風格，使他們的作品在各社群媒體中獲得極大迴響，深獲各年齡層觀眾的喜愛。曾登上2017年「空中英語教室」內頁專訪、2018年「麥香無敵畢業趴Ｘ萬芳高中」的廣告拍攝。
@@ -171,9 +207,11 @@
             <p>尋人啟事不斷挑戰流行音樂與阿卡貝拉的精緻化結合，擅長翻唱組曲，同時也定期發表創作，於各大音樂數位平台發行。同時他們也挑戰阿卡貝拉現場演出的極致，2018年在Legacy舉辦近千人首場全站席演唱會，僅靠純人聲便作出樂團的氣勢與熱力，打破觀眾對於純人聲的想像，創造只屬於他們與聽眾間的音樂共鳴。
             </p>
         </div>
-        <center><div id="b3">
-            <img src="the_wanted.jpg" style="position: relative; top: 6%;">
-        </div></center>
+        <center>
+            <div id="b3">
+                <img src="the_wanted.jpg" style="position: relative; top: 6%;">
+            </div>
+        </center>
     </div>
     <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.gif " onclick="background()"></div>
     <audio id="music" preload="auto" autoplay>
