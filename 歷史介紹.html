@@ -1,153 +1,283 @@
+
 <html>
 
-<head>
-    <title>History</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-    <link rel="stylesheet" type="text/css" href="home.css">
-    <style>
-        @font-face {
-            font-family: "str1";
-            src: url("WCL-07.ttf");
-        }
-        #main {
-            position: absolute;
-            left: 16%;
-            width: 68%;
-            height: 2000px;
-            overflow: hidden;
-            background: rgba(0, 0, 0, .5);
-        }
-
-        body {
-            width: 100%;
-            height: 2000px;
-            background-image: url('sky.jpg');
-        }
-    </style>
-    <script>
-        var count = 0;
-        function mouseover1() {
-
-            document.getElementById("t1").setAttribute("src", "snoopy.gif")
-            piano1 = document.getElementById("piano1");
-            piano1.currentTime = 0;
-            piano1.play();
-        }
-        function mouseover2() {
-
-            document.getElementById("t2").setAttribute("src", "snoopy.gif")
-            piano2 = document.getElementById("piano2");
-            piano2.currentTime = 0;
-            piano2.play();
-        }
-        function mouseover3() {
-
-            document.getElementById("t3").setAttribute("src", "snoopy.gif")
-            piano3 = document.getElementById("piano3");
-            piano3.currentTime = 0;
-            piano3.play();
-        }
-        function mouseover4() {
-
-            document.getElementById("t4").setAttribute("src", "snoopy.gif")
-            piano4 = document.getElementById("piano4");
-            piano4.currentTime = 0;
-            piano4.play();
-        }
-        function mouseover5() {
-
-            document.getElementById("t5").setAttribute("src", "snoopy.gif")
-            piano5 = document.getElementById("piano5");
-            piano5.currentTime = 0;
-            piano5.play();
-        }
-        function mouseover6() {
-
-            document.getElementById("t6").setAttribute("src", "snoopy.gif")
-            piano6 = document.getElementById("piano6");
-            piano6.currentTime = 0;
-            piano6.play();
-        }
-        function mouseout1() {
-            document.getElementById("t1").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout2() {
-            document.getElementById("t2").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout3() {
-            document.getElementById("t3").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout4() {
-            document.getElementById("t4").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout5() {
-            document.getElementById("t5").setAttribute("src", "snoopy.jpg");
-
-        }
-        function mouseout6() {
-            document.getElementById("t6").setAttribute("src", "snoopy.jpg");
-
-        }
-        function background() {
-            count = count + 1;
-
-            music = document.getElementById("music");
-            if (count % 2 == 0) {
-                document.getElementById("cd").setAttribute("src", "cd.gif");
-                music.play();
+    <head>
+        <title>History</title>
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <style>
+            @font-face {
+                font-family: "str1";
+                src: url("WCL-07.ttf");
             }
-            else {
-                document.getElementById("cd").setAttribute("src", "cd.jpg");
-                music.pause();
+    
+            #main {
+                position: absolute;
+                left: 16%;
+                width: 68%;
+                height: 2800px;
+                overflow: hidden;
+                background: rgba(0, 0, 0, .5);
             }
-
-        }
-    </script>
-</head>
-
-<body>
-    <div id="main">
-        <div id="head" align="center" class="animated infinite bounce" style="animation-duration: 2s">歷史介紹</div>
-        <div id="a" class="section"><a href="index.html"><img id="t1" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover1()" onmouseout="mouseout1()"><span class="word1">主頁</span></a></div>
-        <div id="b" class="section"><a href="簡介.html"><img id="t2" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover2()" onmouseout="mouseout2()"><span class="word1">簡介</span></a></div>
-        <div id="c" class="section"><a href="音域.html"><img id="t3" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover3()" onmouseout="mouseout3()"><span class="word1">音域</span></a></div>
-        <div id="d" class="section"><a href="推薦欣賞.html"><img id="t4" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover4()" onmouseout="mouseout4()"><span class="word">推薦欣賞</span></a></div>
-        <div id="e" class="section"><a href="近期活動.html"><img id="t5" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover5()" onmouseout="mouseout5()"><span class="word">近期活動</span></a></div>
-        <div id="f" class="section"><a href="合唱技巧.html"><img id="t6" class="img1" src="snoopy.jpg"
-                    onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">合唱技巧</span></a></div>
-    </div>
-    <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.gif " onclick="background()"></div>
-    <audio id="music" preload="auto" autoplay>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano1" preload="auto">
-        <source src="piano1.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano2" preload="auto">
-        <source src="piano2.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano3" preload="auto">
-        <source src="piano3.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano4" preload="auto">
-        <source src="piano4.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano5" preload="auto">
-        <source src="piano5.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="piano6" preload="auto">
-        <source src="piano6.mp3" type="audio/mpeg">
-    </audio>
-</body>
-
-</html>
+    
+            body {
+                width: 100%;
+                height: 2800px;
+                background-image: url('sky.jpg');
+            }
+    
+            #b1 {
+                position: absolute;
+                top: 700px;
+                left: 10%;
+                width: 80%;
+                height: 200px;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.466);
+                border-radius: 40px;
+            }
+    
+            #b2 {
+                position: absolute;
+                top: 950px;
+                left: 10%;
+                width: 80%;
+                height: 285px;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.466);
+                border-radius: 40px;
+            }
+    
+            #b3 {
+                position: absolute;
+                top: 1300px;
+                left: 20%;
+                width: 55%;
+                height: 300px;
+                z-index: 2;
+                background: rgba(255, 192, 203, 0.699);
+                border-radius: 40px;
+            }
+    
+            #b4 {
+                position: absolute;
+                top: 1650px;
+                left: 10%;
+                width: 80%;
+                height: 285px;
+                z-index: 2;
+                background: rgba(0, 0, 0, 0.466);
+                border-radius: 40px;
+            }
+    
+            #b5 {
+                position: absolute;
+                top: 2000px;
+                left: 1%;
+                width: 47%;
+                height: 300px;
+                z-index: 2;
+                background: rgba(255, 192, 203, 0.699);
+                border-radius: 40px;
+            }
+    
+            #b6 {
+                position: absolute;
+                top: 2000px;
+                right: 1%;
+                width: 47%;
+                height: 300px;
+                z-index: 2;
+                background: rgba(255, 192, 203, 0.699);
+                border-radius: 40px;
+            }
+        </style>
+        <script>
+            var count = 0;
+            function mouseover1() {
+    
+                document.getElementById("t1").setAttribute("src", "snoopy.gif")
+                piano1 = document.getElementById("piano1");
+                piano1.currentTime = 0;
+                piano1.play();
+            }
+            function mouseover2() {
+    
+                document.getElementById("t2").setAttribute("src", "snoopy.gif")
+                piano2 = document.getElementById("piano2");
+                piano2.currentTime = 0;
+                piano2.play();
+            }
+            function mouseover3() {
+    
+                document.getElementById("t3").setAttribute("src", "snoopy.gif")
+                piano3 = document.getElementById("piano3");
+                piano3.currentTime = 0;
+                piano3.play();
+            }
+            function mouseover4() {
+    
+                document.getElementById("t4").setAttribute("src", "snoopy.gif")
+                piano4 = document.getElementById("piano4");
+                piano4.currentTime = 0;
+                piano4.play();
+            }
+            function mouseover5() {
+    
+                document.getElementById("t5").setAttribute("src", "snoopy.gif")
+                piano5 = document.getElementById("piano5");
+                piano5.currentTime = 0;
+                piano5.play();
+            }
+            function mouseover6() {
+    
+                document.getElementById("t6").setAttribute("src", "snoopy.gif")
+                piano6 = document.getElementById("piano6");
+                piano6.currentTime = 0;
+                piano6.play();
+            }
+            function mouseout1() {
+                document.getElementById("t1").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout2() {
+                document.getElementById("t2").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout3() {
+                document.getElementById("t3").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout4() {
+                document.getElementById("t4").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout5() {
+                document.getElementById("t5").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function mouseout6() {
+                document.getElementById("t6").setAttribute("src", "snoopy.jpg");
+    
+            }
+            function background() {
+                count = count + 1;
+    
+                music = document.getElementById("music");
+                if (count % 2 == 0) {
+                    document.getElementById("cd").setAttribute("src", "cd.gif");
+                    music.play();
+                }
+                else {
+                    document.getElementById("cd").setAttribute("src", "cd.jpg");
+                    music.pause();
+                }
+    
+            }
+            function bon3() {
+                music1 = document.getElementById("music1");
+                music1.currentTime = 0;
+                music1.play();
+            }
+            function bon5() {
+                music2 = document.getElementById("music2");
+                music2.currentTime = 10;
+                music2.play();
+            } 
+            function bon6() {
+                music3 = document.getElementById("music3");
+                music3.currentTime = 30;
+                music3.play();
+            }
+            function bout3(){
+                music1.pause();
+            }
+            function bout5(){
+                music2.pause();
+            }
+            function bout6(){
+                music3.pause();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="main">
+            <div id="head" align="center" class="animated infinite bounce" style="animation-duration: 2s">歷史介紹</div>
+            <div id="a" class="section"><a href="index.html"><img id="t1" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover1()" onmouseout="mouseout1()"><span class="word1">主頁</span></a></div>
+            <div id="b" class="section"><a href="簡介.html"><img id="t2" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover2()" onmouseout="mouseout2()"><span class="word1">簡介</span></a></div>
+            <div id="c" class="section"><a href="音域.html"><img id="t3" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover3()" onmouseout="mouseout3()"><span class="word1">音域</span></a></div>
+            <div id="d" class="section"><a href="推薦欣賞.html"><img id="t4" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover4()" onmouseout="mouseout4()"><span class="word">推薦欣賞</span></a></div>
+            <div id="e" class="section"><a href="近期活動.html"><img id="t5" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover5()" onmouseout="mouseout5()"><span class="word">近期活動</span></a></div>
+            <div id="f" class="section"><a href="合唱技巧.html"><img id="t6" class="img1" src="snoopy.jpg"
+                        onmouseover="mouseover6()" onmouseout="mouseout6()"><span class="word">合唱技巧</span></a></div>
+            <div id="b1">
+                <p>
+                    最早的出現在古希臘和古羅馬的戲劇中，已經有的歌隊表演，意外吧，通常大家的印象可是有宗教的合唱團演唱吧!!不過這比較廣為人知的就不多著墨了。
+                </p>
+            </div>
+            <div id="b2">
+                <p>
+                    阿卡貝拉，其實是所謂的無伴奏合唱，常見於15和16世紀的教堂音樂，亦有組合利用這種形式來重新編排流行音樂。國王合唱團、史溫格歌手、Take 6、真實之聲、Pentatonix、VoicePlay、New
+                    York Voices、The Manhattan
+                    Transfer為其中較為聞名的合唱團。不過現在感覺上逐漸融於網路音樂中，當一首曲子紅的時候，他的阿卡貝拉版也會出現不少，最好玩的個人就在這邊推薦chicken attack吧!
+                </p>
+            </div>
+            <div id="b3" class="overdiv">
+                <img src="chickenAttack.jfif" class="imgformusic" onmouseover="bon3()" onmouseout="bout3()"
+                    style="cursor: pointer;position: relative;top:10%;width:400px;height:250px;margin:auto;">
+                <audio id="music1" preload="auto">
+                    <source src="chickenAttack.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div id="b4">
+                <p>
+                    再來介紹的是如今仍然非常有趣的歌劇，西方舞台表演藝術，簡單而言就是主要或完全以歌唱和音樂來交代和表達劇情的戲劇，歌劇在17世紀，即1600年前後才出現在義大利的佛羅倫斯，它源自古希臘戲劇的劇場音樂。現在也隨著大眾的喜好有時候也上到了電影院。也有一些從電影跑到歌劇。其中著名的就有冰雪奇緣，悲慘世界。
+                </p>
+            </div>
+            <div id="b5" class="overdiv">
+                <img src="snow.jpg" class="imgformusic" onmouseover="bon5()" onmouseout="bout5()"
+                    style="cursor: pointer;position: relative;width:400px;height:250px;margin:auto;top:8% ;">
+                <audio id="music2" preload="auto">
+                    <source src="snow.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div id="b6" class="overdiv">
+                <img src="les_miserables.jpg" class="imgformusic" onmouseover="bon6()" onmouseout="bout6()"
+                    style="cursor: pointer;position: relative;;width:400px;height:250px;margin:auto;top: 8%;">
+                <audio id="music3" preload="auto">
+                    <source src="les_miserables.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+        <div id="right" style=" cursor: pointer" title="撥放音樂"><img id="cd" src="cd.gif " onclick="background()"></div>
+        <audio id="music" preload="auto" autoplay>
+            <source src="calon.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano1" preload="auto">
+            <source src="piano1.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano2" preload="auto">
+            <source src="piano2.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano3" preload="auto">
+            <source src="piano3.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano4" preload="auto">
+            <source src="piano4.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano5" preload="auto">
+            <source src="piano5.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="piano6" preload="auto">
+            <source src="piano6.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+    
+    </html>
