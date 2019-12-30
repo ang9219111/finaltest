@@ -151,32 +151,21 @@
                 }
     
             }
-            var b1=0;
-            function bu1(){
-                b1=b1+1;
+            function bon1(){
                 music1 = document.getElementById("music1");
-                if (b1 % 2 != 0) {
-                    music1.currentTime=7;
-                    music1.play();
-                }
-                else {
-    
-                    music1.pause();
-                }
-    
+                music1.currentTime=7;
+                music1.play();
             }
-            var b2=0;
-            function bu2(){
-                b2=b2+1;
+            function bout1(){
+                music1.pause();
+            }
+            function bon2(){
                 music2 = document.getElementById("music2");
-                if (b2 % 2 != 0) {
-                    music2.currentTime=5;
-                    music2.play();
-                }
-                else {
-    
-                    music2.pause();
-                }
+                music2.currentTime=7;
+                music2.play();      
+            }
+            function bout2(){
+                music2.pause();
             }
         </script>
     </head>
@@ -204,13 +193,13 @@
                 </p>
             </div>
             <center><div id="b3" class="overdiv">
-                <img src="one_voice.jpg" onclick="bu1()" class="imgformusic" style="position: relative; top:11% ;cursor: pointer" >
+                <img src="one_voice.jpg" onmouseover="bon1()" onmouseout="bout1()" class="imgformusic" style="position: relative; top:11% ;cursor: pointer" >
                 <audio id="music1" preload="auto" >
                     <source src="one_voice.mp3" type="audio/mpeg">
                 </audio>
             </div></center>
             <center><div id="b4" class="overdiv">
-                <img src="diamonds.jpg"  onclick="bu2()" class="imgformusic" style="position: relative;top: 13%;cursor: pointer">
+                <img src="diamonds.jpg"  onmouseover="bon2()" onmouseout="bout2()" class="imgformusic" style="position: relative;top: 13%;cursor: pointer">
                 <audio id="music2" preload="auto" >
                     <source src="diamonds.mp3" type="audio/mpeg">
                 </audio>
